@@ -162,8 +162,12 @@
 			this.levelBack.forEach( function( el, i ) {
 				el.addEventListener( self.eventtype, function( ev ) {
 					ev.preventDefault();
-					self.level = closest( el, 'mp-level' ).getAttribute( 'data-level' ) - 1;
-					self.level === 0 ? self._resetMenu() : self._closeMenu();
+					var level = closest( el, 'mp-level' ).getAttribute( 'data-level' );
+					if( self.level <= level ) {
+						ev.stopPropagation();
+						self.level = closest( el, 'mp-level' ).getAttribute( 'data-level' ) - 1;
+						self.level === 0 ? self._resetMenu() : self._closeMenu();
+					}
 				} );
 			} );	
 		},

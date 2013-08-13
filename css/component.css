@@ -6,13 +6,12 @@
     box-sizing: border-box;
 }
 
-html, body, .container {
+html, body, .container, .scroller {
 	height: 100%;
 }
 
 .scroller {
 	overflow-y: scroll;
-	height: 100%;
 }
 
 .scroller,
@@ -259,13 +258,20 @@ html, body, .container {
 	transition: background 0.3s;
 }
 
-.mp-back:after {
+.mp-back::after {
 	font-family: 'linecons';
 	position: absolute;
 	content: "\e037";
 	right: 10px;
 	font-size: 1.3em;
 	color: rgba(0,0,0,0.3);
+}
+
+.mp-menu .mp-level.mp-level-overlay > .mp-back,
+.mp-menu .mp-level.mp-level-overlay > .mp-back::after {
+	background: transparent;
+	box-shadow: none;
+	color: transparent;
 }
 
 /* Fallback example for browsers that don't support 3D transforms (and no JS fallback) */
