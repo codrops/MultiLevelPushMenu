@@ -187,6 +187,12 @@
 			new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ), {
 				type : 'cover'
 			} );
+			document.addEventListener("mlpmopen",  function(){
+				console.log('open');
+			}, false);
+			document.addEventListener("mlpmclose",  function(){
+				console.log('close');
+			}, false);
 		</script>
 	</body>
 </html>
