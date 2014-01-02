@@ -185,6 +185,13 @@
 		<script src="js/mlpushmenu.js"></script>
 		<script>
 			new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ) );
+		
+			document.addEventListener("mlpmopen",  function(){
+				console.log('open');
+			}, false);
+			document.addEventListener("mlpmclose",  function(){
+				console.log('close');
+			}, false);
 		</script>
 	</body>
 </html>
