@@ -241,6 +241,11 @@ html, body, .container, .scroller {
 	box-shadow: inset 0 -1px rgba(0,0,0,0);
 }
 
+.mp-level > ul > li:first-child > a:hover,
+.mp-level.mp-level-overlay > ul > li:first-child > a {
+	box-shadow: inset 0 -1px rgba(0,0,0,0), inset 0 1px rgba(0,0,0,0);
+} /* seems like Chrome 34.0.1847.131 needs the second shadow otherwise the transition breaks */
+
 .mp-back {
 	background: rgba(0,0,0,0.1);
 	outline: none;
