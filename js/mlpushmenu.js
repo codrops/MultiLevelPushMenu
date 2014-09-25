@@ -76,7 +76,9 @@
 			// space between each overlaped level
 			levelSpacing : 40,
 			// classname for the element (if any) that when clicked closes the current level
-			backClass : 'mp-back'
+			backClass : 'mp-back', 
+			// wrapperId for the moving wrapper
+			pusherId : 'mp-pusher'
 		},
 		_init : function() {
 			// if menu is open or not
@@ -84,7 +86,7 @@
 			// level depth
 			this.level = 0;
 			// the moving wrapper
-			this.wrapper = document.getElementById( 'mp-pusher' );
+			this.wrapper = document.getElementById( this.options.pusherId );
 			// the mp-level elements
 			this.levels = Array.prototype.slice.call( this.el.querySelectorAll( 'div.mp-level' ) );
 			// save the depth of each of these mp-level elements
