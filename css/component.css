@@ -46,6 +46,7 @@ html, body, .container, .scroller {
 	position: relative;
 	left: 0;
 	height: 100%;
+	perspective: 1000px;
 }
 
 .mp-menu {
