@@ -25,6 +25,7 @@ a {
 
 a:hover, a:focus {
 	color: #fff;
+	outline: none;
 }
 
 /* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
