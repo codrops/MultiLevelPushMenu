@@ -134,7 +134,7 @@
 				// check if it has a sub level
 				var subLevel = el.querySelector( 'div.mp-level' );
 				if( subLevel ) {
-					el.querySelector( 'a' ).addEventListener( self.eventtype, function( ev ) {
+					el.querySelector( 'a' ).addEventListener( 'click', function( ev ) {
 						ev.preventDefault();
 						var level = closest( el, 'mp-level' ).getAttribute( 'data-level' );
 						if( self.level <= level ) {
