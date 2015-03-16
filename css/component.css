@@ -47,7 +47,12 @@ html, body, .container, .scroller {
 	left: 0;
 	height: 100%;
 }
-
+.mp-menu * {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
 .mp-menu {
 	position: absolute; /* we can't use fixed here :( */
 	top: 0;
@@ -62,6 +67,8 @@ html, body, .container, .scroller {
 	-webkit-transform: translate3d(-100%, 0, 0);
 	-moz-transform: translate3d(-100%, 0, 0);
 	transform: translate3d(-100%, 0, 0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
 .mp-level {
@@ -78,6 +85,8 @@ html, body, .container, .scroller {
 	-webkit-transform: translate3d(-100%, 0, 0);
 	-moz-transform: translate3d(-100%, 0, 0);
 	transform: translate3d(-100%, 0, 0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
 /* overlays for pusher and for level that gets covered */
@@ -143,6 +152,8 @@ html, body, .container, .scroller {
 	-webkit-transform: translate3d(-40px, 0, 0);
 	-moz-transform: translate3d(-40px, 0, 0);
 	transform: translate3d(-40px, 0, 0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
 /* First level */
@@ -158,6 +169,8 @@ html, body, .container, .scroller {
 	-webkit-transform: translate3d(0, 0, 0);
 	-moz-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
 /* cover */
@@ -169,6 +182,8 @@ html, body, .container, .scroller {
 	-webkit-transform: translate3d(0, 0, 0);
 	-moz-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
 .mp-cover .mp-level.mp-level-open > ul > li > .mp-level:not(.mp-level-open) {
@@ -179,6 +194,8 @@ html, body, .container, .scroller {
 	-webkit-transform: translate3d(-100%, 0, 0);
 	-moz-transform: translate3d(-100%, 0, 0);
 	transform: translate3d(-100%, 0, 0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
 /* content style */
@@ -212,6 +229,8 @@ html, body, .container, .scroller {
 	-moz-transform: translateX(-100%);
 	-ms-transform: translateX(-100%);
 	transform: translateX(-100%);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
 .mp-menu.mp-cover h2 {
@@ -230,6 +249,8 @@ html, body, .container, .scroller {
 	-moz-transform: translateX(0);
 	-ms-transform: translateX(0);
 	transform: translateX(0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
 .mp-menu ul li > a {
