@@ -8,3 +8,14 @@ An experimental push menu with multi-level functionality that allows endless nes
 [demo](http://tympanus.net/Development/MultiLevelPushMenu/)
 
 [LICENSING & TERMS OF USE](http://tympanus.net/codrops/licensing/)
+
+## RequireJS Configuration
+```javascript
+require.config({
+ packages: [{
+      name: "mlpushmenu",
+      location: ".../path/to/MultiLevelPushMenu/js",
+      main: "mlpushmenu"
+  }]
+}
+```

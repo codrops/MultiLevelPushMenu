@@ -8,7 +8,12 @@
  * Copyright 2013, Codrops
  * http://www.codrops.com
  */
-;( function( window ) {
+;(function(mlpush) {
+	if (typeof define == "function" && define.amd) // AMD
+		return define(["mlpushmenu/classie", "mlpushmenu/modernizr.custom"], mlpush);
+	else // Plain browser env
+		this.mlPushMenu = mlpush(classie);
+})( function( classie ) {
 	
 	'use strict';
 
@@ -238,6 +243,5 @@
 	}
 
 	// add to global namespace
-	window.mlPushMenu = mlPushMenu;
-
-} )( window );
+	return mlPushMenu;
+});
