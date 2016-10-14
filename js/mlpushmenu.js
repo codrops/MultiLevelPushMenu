@@ -192,10 +192,13 @@
 					}
 				}
 			}
-			// add class mp-pushed to main wrapper if opening the first time
+			// add class mp-pushed to main wrapper if opening the first time && dispatch an open event
 			if( this.level === 1 ) {
 				classie.add( this.wrapper, 'mp-pushed' );
 				this.open = true;
+				var evt = document.createEvent('Event');
+				evt.initEvent('mlpmopen', true, true);
+				document.dispatchEvent(evt);
 			}
 			// add class mp-level-open to the opening level element
 			classie.add( subLevel || this.levels[0], 'mp-level-open' );
@@ -208,6 +211,9 @@
 			classie.remove( this.wrapper, 'mp-pushed' );
 			this._toggleLevels();
 			this.open = false;
+			var evt = document.createEvent('Event');
+			evt.initEvent('mlpmclose', true, true);
+			document.dispatchEvent(evt);
 		},
 		// close sub menus
 		_closeMenu : function() {
