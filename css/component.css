@@ -142,6 +142,7 @@ html, body, .container, .scroller {
 .mp-cover .mp-level.mp-level-open {
 	-webkit-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
+	overflow-y: auto;
 }
 
 .mp-cover .mp-level.mp-level-open > ul > li > .mp-level:not(.mp-level-open) {
